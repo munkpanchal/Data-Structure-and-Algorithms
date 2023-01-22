@@ -40,6 +40,27 @@ class LinkedList {
         }
         return arr;
     }
+    // Pop out the element from the linked list
+
+    pop() {
+
+        if (!this.head) return undefined;
+
+        let current = this.head;
+        let last = current;
+        while (current.next) {
+            last = current;
+            current = current.next;
+        }
+        this.tail = last;
+        this.tail.next = null;
+        this.length--;
+        if (this.length === 0) {
+            this.head = null;
+            this.tail = null;
+        }
+        return this;
+    }
 
 
 }
