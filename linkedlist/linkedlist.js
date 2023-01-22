@@ -63,6 +63,26 @@ class LinkedList {
     }
 
 
+
+    // Remove element from the start of the list
+
+    shift() {
+
+        let newHead = this.head;
+        if (!this.head) {
+            return undefined;
+        } else {
+            this.head = newHead.next;
+        }
+        this.length--;
+        if (this.length === 0) {
+            this.head = null;
+            this.tail = null;
+        }
+        return this;
+    }
+
+
 }
 
 const obj = new LinkedList();
