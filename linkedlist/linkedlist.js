@@ -98,6 +98,21 @@ class LinkedList {
 
     }
 
+    // Get the node present at the given index;
+
+    get(index) {
+        if (index < 0 || index >= this.length) return undefined;
+        let current = this.head;
+        let count = 0;
+        while (count !== index) {
+            current = current.next;
+            count++;
+        }
+        return current;
+
+    }
+
+
 
 
 }
