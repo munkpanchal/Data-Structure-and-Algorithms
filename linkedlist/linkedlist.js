@@ -112,6 +112,18 @@ class LinkedList {
 
     }
 
+    // Update the value at the given index
+
+    set(val, index) {
+        if (index < 0 || index >= this.length) return !!undefined;
+        let nodeToBeUpdated = this.get(index);
+        if (nodeToBeUpdated) {
+            nodeToBeUpdated.val = val;
+            return true;
+        }
+        return false;
+    }
+
 
 
 
