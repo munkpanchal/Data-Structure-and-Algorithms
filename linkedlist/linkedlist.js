@@ -146,6 +146,30 @@ class LinkedList {
         
     }
 
+     // Remove from the give index
+
+     remove(idx){
+        
+        if(idx < 0 || idx >= this.length){
+             return !!undefined;            
+        }else if (idx === 0 ){
+            return this.shift();
+        } else if(idx === this.length-1){
+            return this.pop();
+        }else{ 
+            
+            let prevNode = this.get(idx-1);
+            let currentNode = prevNode.next;
+            prevNode.next = currentNode.next;
+            this.length--;
+            return true;
+            
+        }
+        return false;
+        
+    }
+   
+
 
 
 
