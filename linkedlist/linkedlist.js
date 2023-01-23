@@ -125,6 +125,27 @@ class LinkedList {
         return false;
     }
 
+     // Insert the value at the given index
+    
+     insert(idx,val){
+        if (idx < 0 || idx >= this.length){
+             return !!undefined;            
+        }else if (idx === 0 ){
+            this.unshift(val);
+        } else if(idx === this.length-1){
+            this.push(val);
+        }else{ 
+            let newNode = new Node(val);
+            let prevNode = this.get(idx-1);
+            let currentNode = this.get(idx);
+            newNode.next = currentNode;
+            prevNode.next = newNode;
+        }
+        this.length++;
+        return true;
+        
+    }
+
 
 
 
