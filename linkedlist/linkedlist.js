@@ -11,6 +11,7 @@ class LinkedList {
         this.tail = null;
         this.length = 0;
     }
+
     // Push method of LinkedList
 
     push(val) {
